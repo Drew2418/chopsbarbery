@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Chops Barbery</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="#home">
+                    <img src="images/image4.jpg" alt="The Chops Barbery Logo">
+                </a>
+            </div>
+
+            <!-- Hamburger Button -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Nav Menu -->
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about-us" class="nav-link">About</a></li>
+                <li><a href="#team" class="nav-link">Barbers</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact-us" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Right side -->
+            <div class="nav-right">
+                <a href="tel:8307552338" class="phone">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M6.6,10.8c1.1,2.1,2.8,3.8,4.9,4.9l1.6-1.6c0.3-0.3,0.8-0.4,1.1-0.2c1.2,0.4,2.5,0.6,3.8,0.6c0.6,0,1,0.6,1,1v2.5c0,0.6-0.5,1-1,1C10,19,5,14,5,7.5C5,7,5.5,6.5,6,6.5H8.5c0.6,0,1,0.5,1,1c0,1.3,0.2,2.6,0.6,3.8c0.1,0.4,0,0.8-0.2,1.1L6.6,10.8z"/>
+                    </svg>
+                    (830) 755-2338
+                </a>
+                <a href="https://book.squareup.com/appointments/3ul10ylsvb3kl2/location/ZJ855P5BB5REF/services"
+                   target="_blank"
+                   class="book-btn">
+                    Book Now!
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main id="home">
+        <!-- HERO -->
+    <section class="hero">
+        <img src="images/hero1.jpg" alt="Barber Shop">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>The Chops Barbery</h1>
+            <p>In Fair Oaks Ranch, Texas</p>
+        </div>
+        <div class="hero-location">
+            <span>📍</span>
+            28255 W I-10 Frontage Rd, Unit 105 · Fair Oaks Ranch, TX
+        </div>
+
+    </section>
+
+    <!-- ABOUT US -->
+    <section id="about-us">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>
+                    At <strong>The Chops Barbery</strong>, we bring traditional craftsmanship and modern style
+                    to Fair Oaks Ranch. Our barbers take pride in delivering sharp cuts, professional service,
+                    and a relaxed environment.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="images/image3.jpg" alt="Barber shop interior">
+            </div>
+        </div>
+    </section>
+
+    <!-- BARBERS -->
+    <section id="team">
+        <div class="barbers-container">
+            <h2>Barbers</h2>
+            <div class="barbers-grid">
+                <div class="barber">
+                    <img src="images/paul1.jpg" alt="Paul">
+                    <h3>Paul</h3>
+                </div>
+                <div class="barber">
+                    <img src="images/jacob1.6.jpg" alt="Jacob">
+                    <h3>Jacob</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- SERVICES -->
+    <section id="services">
+        <h2 class="services-title">Services</h2>
+
+        <div class="services-wrapper">
+            <div class="service-grid">
+
+                <div class="service-card" onclick="openServiceModal(
+                    'Full Service',
+                    'Haircut + Shampoo + Neck Shave',
+                    '$40',
+                    '45 min',
+                    'https://book.squareup.com/appointments/3ul10ylsvb3kl2/location/ZJ855P5BB5REF/services/S2W7GVIVVBXY7RXKQEUN6XEF'
+                )">
+                    <div class="service-title">FULL SERVICE</div>
+                    <div class="service-desc">Haircut, shampoo, and hot towel shave</div>
+                </div>
+
+                <div class="service-card" onclick="openServiceModal(
+                    'Hot Towel Shave',
+                    'Classic face shave',
+                    '$30',
+                    '30 min',
+                    'https://book.squareup.com/appointments/3ul10ylsvb3kl2/location/ZJ855P5BB5REF/services/35DHT54XTH2RNA75FKOAHR6O'
+                )">
+                    <div class="service-title">HOT TOWEL SHAVE</div>
+                    <div class="service-desc">Classic face shave with hot towels</div>
+                </div>
+
+                <div class="service-card" onclick="openServiceModal(
+                    'Overhaul',
+                    'Full service cut + hot towel shave',
+                    '$60',
+                    '60 min',
+                    'https://book.squareup.com/appointments/3ul10ylsvb3kl2/location/ZJ855P5BB5REF/services/BPY4RPG53WEBEHMU6HYFP6DO'
+                )">
+                    <div class="service-title">OVERHAUL</div>
+                    <div class="service-desc">Haircut + hot towel shave package</div>
+                </div>
+
+                <div class="service-card" onclick="openServiceModal(
+                    'Sidecar Set-Up',
+                    'Father & son haircuts',
+                    '$60',
+                    '1 hr 15 min',
+                    'https://book.squareup.com/appointments/3ul10ylsvb3kl2/location/ZJ855P5BB5REF/services/ITHA6MFJB23LVOITEJ564UI5'
+                )">
+                    <div class="service-title">SIDECAR SET-UP</div>
+                    <div class="service-desc">Father & son cut combo</div>
+                </div>
+
+                <div class="service-card" onclick="openServiceModal(
+                    'Tune-Up',
+                    'A made-to-order haircut without shampoo & neck shave',
+                    '$35',
+                    '30 min',
+                    'https://book.squareup.com/appointments/3ul10ylsvb3kl2/location/ZJ855P5BB5REF/services/FWCEQRFCV4F67RVHYSHAZW62'
+                )">
+                    <div class="service-title">TUNE-UP</div>
+                    <div class="service-desc">Made-to-order haircut</div>
+                </div>
+
+                <div class="service-card" onclick="openServiceModal(
+                    'Touch-Up',
+                    'Grey coverage & roots touch-up',
+                    '$30',
+                    '45 min',
+                    'https://book.squareup.com/appointments/3ul10ylsvb3kl2/location/ZJ855P5BB5REF/services/7SJVXMIQKCV254UADQSYWU6D'
+                )">
+                    <div class="service-title">TOUCH-UP</div>
+                    <div class="service-desc">Grey coverage and roots</div>
+                </div>
+
+                <div class="service-card" onclick="openServiceModal(
+                    'Skin Fade',
+                    'Skin fade haircut with shampoo & neck shave',
+                    '$45',
+                    '60 min',
+                    'https://book.squareup.com/appointments/3ul10ylsvb3kl2/location/ZJ855P5BB5REF/services/TIBGCIHZ4WUU7EVPI62KFGDV'
+                )">
+                    <div class="service-title">SKIN FADE</div>
+                    <div class="service-desc">Skin fade with full service</div>
+                </div>
+
+                <div class="service-card" onclick="openServiceModal(
+                    'Beard Balance & Trim',
+                    'Beard shaping and line up',
+                    '$25',
+                    '30 min',
+                    'https://book.squareup.com/appointments/3ul10ylsvb3kl2/location/ZJ855P5BB5REF/services/BYUQCDGPIW27KYVNL3PL2SE4'
+                )">
+                    <div class="service-title">BEARD BALANCE & TRIM</div>
+                    <div class="service-desc">Beard shaping and line up</div>
+                </div>
+
+                <div class="service-card" onclick="openServiceModal(
+                    'Oil Change',
+                    'Haircuts for little men, ages 3–12',
+                    '$30',
+                    '30 min',
+                    'https://book.squareup.com/appointments/3ul10ylsvb3kl2/location/ZJ855P5BB5REF/services/W5YHZBV75TAVCEKOKHCZ4OG4'
+                )">
+                    <div class="service-title">OIL CHANGE</div>
+                    <div class="service-desc">Kids cuts (ages 3–12)</div>
+                </div>
+
+            </div>
+
+            <!-- Right-side images -->
+            <div class="service-images">
+                <img src="images/image18.jpg" alt="Service">
+                <img src="images/image17.jpg" alt="Service">
+                <img src="images/image16.jpg" alt="Service">
+            </div>
+        </div>
+
+        <!-- MODAL -->
+        <div id="serviceModal" class="modal-overlay" onclick="closeServiceModal()">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <h3 id="serviceModalTitle"></h3>
+                <p id="serviceModalDesc"></p>
+                <p><strong>Price:</strong> <span id="serviceModalPrice"></span></p>
+                <p><strong>Time:</strong> <span id="serviceModalTime"></span></p>
+                <button id="serviceModalBtn" class="modal-btn">Book Now</button>
+                <button class="modal-close" onclick="closeServiceModal()">Close</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact-us">
+        <div class="contact-wrapper">
+
+            <!-- Left: Image -->
+            <div class="contact-image">
+                <img src="images/hero3.jpg" alt="The Chops Barbery">
+            </div>
+
+            <!-- Right: Info + Map -->
+            <div class="contact-card">
+                <h2>Contact Us</h2>
+
+                <div class="contact-details">
+                    <p class="contact-email">
+                        <a href="mailto:theporkchopbarber@gmail.com">
+                            theporkchopbarber@gmail.com
+                        </a>
+                    </p>
+
+                    <p class="contact-address">
+                        28255 IH-10 W. Ste. 105<br>
+                        Fair Oaks Ranch, TX 78006
+                    </p>
+                </div>
+
+                <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13860.280356534127!2d-98.67576737386379!3d29.71772893870072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865c758cac864655%3A0x13d353ec4bce5688!2sThe%20Chops%20Barbery!5e0!3m2!1sen!2sus!4v1764268812649!5m2!1sen!2sus"
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+<!-- MODAL JS -->
+<script>
+function openServiceModal(name, desc, price, time, link) {
+    document.getElementById('serviceModalTitle').textContent = name;
+    document.getElementById('serviceModalDesc').textContent = desc;
+    document.getElementById('serviceModalPrice').textContent = price;
+    document.getElementById('serviceModalTime').textContent = time;
+    document.getElementById('serviceModalBtn').onclick = () => {
+        window.open(link, '_blank');
+    };
+    document.getElementById('serviceModal').classList.add('active');
+}
+
+function closeServiceModal() {
+    document.getElementById('serviceModal').classList.remove('active');
+}
+</script>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-content">
+
+            <div class="footer-left">
+                <h3>The Chops Barbery</h3>
+                <p>
+                    28255 W I-10 Frontage Rd, Unit 105<br>
+                    Fair Oaks Ranch, TX 78006
+                </p>
+                <p><strong>Phone:</strong> <a href="tel:8307552338">(830) 755-2338</a></p>
+            </div>
+
+            <div class="footer-center">
+                <h4>Hours</h4>
+                <p>
+                    Tuesday – Friday: 10:00 AM – 7:00 PM<br>
+                    Saturday: 10:00 AM – 4:00 PM<br>
+                    Sunday & Monday: Closed
+                </p>
+            </div>
+
+            <div class="footer-right">
+                <h4>Follow Us</h4>
+                <div class="social-footer">
+                    <a href="https://www.facebook.com/thechopsbarbery/" target="_blank">
+                        <img src="icons/facebook_icon.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/thechopsbarbery/" target="_blank">
+                        <img src="icons/instagram_icon.png" alt="Instagram">
+                    </a>
+                </div>
+                <a href="https://book.squareup.com/appointments/3ul10ylsvb3kl2/location/ZJ855P5BB5REF/services"
+                   target="_blank"
+                   class="footer-book-btn">
+                    Book Appointment
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> The Chops Barbery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('shrink', window.scrollY > 80);
+        });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
