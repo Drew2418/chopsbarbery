@@ -13,6 +13,7 @@ html { scroll-behavior: smooth; }
     top: 0; left: 0;
     width: 100%; height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 .overlay {
     position: absolute;
@@ -28,8 +29,10 @@ html { scroll-behavior: smooth; }
     z-index: 10;
     color: white;
     width: 100%;
-    max-width: 1400px;   /* ⬅ increase this if needed */
-    padding: 0 20px;    /* safe mobile padding */
+    max-width: 1400px;
+    padding: 0 20px;
+    font-size: 140px;
+    white-space: nowrap;
 }
 .hero-content h1 {
     font-family: 'Great Vibes', cursive;
@@ -37,7 +40,6 @@ html { scroll-behavior: smooth; }
     color: #cc3b3b;
     text-shadow: 5px 5px 10px black;
     margin: 0;
-    white-space: nowrap;   /* ⬅ prevents wrapping */
     letter-spacing: 1px;
 }
 .hero-content p {
@@ -104,8 +106,20 @@ html { scroll-behavior: smooth; }
 #team { padding: 20px 20px 40px; background: #111111; }
 .barbers-container { max-width: 1000px; margin: 0 auto; text-align: center; }
 .barbers-container h2 { font-size: 120px; font-family: 'Great Vibes', cursive; color: #ddd; margin-bottom: 5px; }
-.barbers-grid { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
-.barber { flex: 1; min-width: 200px; text-align: center; }
+
+.barbers-grid {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.barber {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
 .barber img {
     width: 100%; max-width: 300px;
     border-radius: 12px;
@@ -292,21 +306,40 @@ html { scroll-behavior: smooth; }
     border-radius: 5px; cursor: pointer;
 }
 
-/* RESPONSIVE – replace your entire @media section with this */
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+/* Tablets & small laptops */
 @media (max-width: 1024px) {
-    .service-grid {
-        grid-template-columns: 1fr;
+    .hero-content h1 {
+        font-size: 100px;
+        white-space: normal;
     }
+
     .services-wrapper {
         flex-direction: column;
     }
-    .service-images { display: none; }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+        min-width: 100%;
+    }
+
+    .service-images {
+        display: none;
+    }
 }
 
+/* Tablets & large phones */
 @media (max-width: 768px) {
-    .hero-content h1 { font-size: 60px; }
-    .hero-content p { font-size: 28px; }
-    .address-text { font-size: 18px; bottom: 10px; left: 10px; right: 10px; }
+    .hero-content h1 {
+        font-size: 70px;
+    }
+
+    .hero-content p {
+        font-size: 28px;
+    }
 
     .hero-location {
         font-size: 15px;
@@ -314,30 +347,86 @@ html { scroll-behavior: smooth; }
         bottom: 20px;
         text-align: center;
     }
-}
 
+    .hero img {
+        object-position: center top;
+    }
+
+
+    .address-text {
+        font-size: 18px;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+    }
 
     .about-text h2,
     .barbers-container h2,
-    .services-title { font-size: 70px !important; }
+    .services-title {
+        font-size: 70px !important;
+    }
 
-    .barber h3 { font-size: 40px; }
+    .barber h3 {
+        font-size: 40px;
+    }
+
+    .barber img {
+        transform: scale(1);
+        max-width: 220px;
+    }
+
+    .service-grid {
+        gap: 18px;
+    }
 
     .service-card {
         padding: 20px;
     }
-    .service-title { font-size: 24px; }
-    .service-desc { font-size: 16px; }
+
+    .service-title {
+        font-size: 24px;
+    }
+
+    .service-desc {
+        font-size: 16px;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-card h2 {
+        font-size: 48px;
+    }
 }
 
+/* Small phones */
 @media (max-width: 480px) {
-    .hero-content h1 { font-size: 48px; }
-    .hero-content p { font-size: 22px; }
-    .address-text { font-size: 16px; }
+    .hero-content h1 {
+        font-size: 48px;
+        letter-spacing: 0;
+    }
+
+    .hero-content p {
+        font-size: 22px;
+    }
+
+    .address-text {
+        font-size: 16px;
+    }
 
     .about-text h2,
     .barbers-container h2,
-    .services-title { font-size: 55px !important; }
+    .services-title {
+        font-size: 55px !important;
+    }
 
-    section { padding: 50px 15px !important; }
+    section {
+        padding: 50px 15px !important;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
 }
