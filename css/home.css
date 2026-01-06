@@ -13,7 +13,6 @@ html { scroll-behavior: smooth; }
     top: 0; left: 0;
     width: 100%; height: 100%;
     object-fit: cover;
-    object-position: center;
 }
 .overlay {
     position: absolute;
@@ -258,26 +257,6 @@ html { scroll-behavior: smooth; }
     border-radius: 12px;
 }
 
-/* Mobile */
-@media (max-width: 900px) {
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .contact-card {
-        padding: 35px 25px;
-    }
-
-    .contact-card h2 {
-        font-size: 48px;
-        text-align: center;
-    }
-
-    .contact-details {
-        text-align: center;
-    }
-}
 
 /* MODAL */
 .modal-overlay {
@@ -331,8 +310,50 @@ html { scroll-behavior: smooth; }
     }
 }
 
+/* Mobile */
+@media (max-width: 900px) {
+    .contact-image {
+        max-height: 600px;
+        overflow: hidden;
+    }
+
+    .contact-image img {
+        height: auto;
+        object-fit: contain;
+        width: 100%;
+    }
+
+    .contact-wrapper {
+        gap: 40px;
+    }
+
+    .contact-card {
+        padding: 35px 25px;
+    }
+
+    .contact-card h2 {
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .contact-details {
+        text-align: center;
+    }
+}
+
 /* Tablets & large phones */
 @media (max-width: 768px) {
+
+    .hero {
+        height: 70svh; /* fixes mobile browser chrome issue */
+        min-height: 50svh;
+    }
+
+    .hero img {
+        object-fit: cover;
+        object-position: center;
+    }
+
     .hero-content h1 {
         font-size: 70px;
     }
@@ -348,16 +369,8 @@ html { scroll-behavior: smooth; }
         text-align: center;
     }
 
-    .hero img {
-        object-position: center top;
-    }
-
-
     .address-text {
-        font-size: 18px;
-        bottom: 10px;
-        left: 10px;
-        right: 10px;
+        display: none;
     }
 
     .about-text h2,
@@ -396,6 +409,22 @@ html { scroll-behavior: smooth; }
         gap: 40px;
     }
 
+    .contact-card {
+        justify-content: flex-start;
+        gap: 25px;
+        padding: 25px 20px;
+    }
+
+    .contact-map iframe {
+        height: 200px;
+    }
+
+    .contact-email a,
+    .contact-address {
+        font-size: 26px;
+    }
+
+
     .contact-card h2 {
         font-size: 48px;
     }
@@ -404,7 +433,7 @@ html { scroll-behavior: smooth; }
 /* Small phones */
 @media (max-width: 480px) {
     .hero-content h1 {
-        font-size: 48px;
+        font-size: 78px;
         letter-spacing: 0;
     }
 
@@ -412,8 +441,8 @@ html { scroll-behavior: smooth; }
         font-size: 22px;
     }
 
-    .address-text {
-        font-size: 16px;
+    .hero-location {
+        display: none;
     }
 
     .about-text h2,
